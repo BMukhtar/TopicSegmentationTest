@@ -10,7 +10,7 @@ from custom_types import (
 def main():
     eval.eval_topic_segmentation(
         TopicSegmentationDatasets.AMI,
-        TopicSegmentationAlgorithm.BERT,
+        TopicSegmentationAlgorithm.SBERT,
         TopicSegmentationConfig(TextTilingHyperparameters()),
     )
 
