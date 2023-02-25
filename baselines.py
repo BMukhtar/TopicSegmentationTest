@@ -48,9 +48,9 @@ def topic_segmentation_even(
         task_idx += 1
 
         meeting_data = df[df[meeting_id_col_name] == meeting_id]
-        meeting_start_times = meeting_data[start_col_name]
+        # meeting_start_times = meeting_data[start_col_name]
         even_segmentation = []
-        for i, _ in enumerate(meeting_start_times):
+        for i, _ in enumerate(meeting_data):
             if i % 30 == 0:
                 even_segmentation.append(i)
         print(even_segmentation)

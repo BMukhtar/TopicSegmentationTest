@@ -4,11 +4,12 @@ import numpy as np
 import pandas as pd
 import torch
 
-from transformers import RobertaConfig, RobertaModel
+from transformers import RobertaConfig, RobertaModel, RobertaTokenizer
 
 # pretrained roberta model
 configuration = RobertaConfig()
-roberta_model = RobertaModel(configuration)
+roberta_model = RobertaModel.from_pretrained("roberta-base")
+roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
 from custom_types import (
     TopicSegmentationAlgorithm,
@@ -104,13 +105,20 @@ def get_features_from_sentence(batch_sentences, layer=-2):
 
     returns a 1-dimensional tensor of size 758
     """
+    # batch_features = []
+    # for sentence in batch_sentences:
+    #     tokens = roberta_tokenizer.encode(sentence)
+    #     all_layers = roberta_model.extract_features(tokens, return_all_hiddens=True)
+    #     pooling = torch.nn.AvgPool2d((len(tokens), 1))
+    #     sentence_features = pooling(all_layers[layer])
+    #     batch_features.append(sentence_features[0])
     batch_features = []
     for sentence in batch_sentences:
-        tokens = roberta_model.encode(sentence)
-        all_layers = roberta_model.extract_features(tokens, return_all_hiddens=True)
-        pooling = torch.nn.AvgPool2d((len(tokens), 1))
-        sentence_features = pooling(all_layers[layer])
-        batch_features.append(sentence_features[0])
+        tokens = roberta_tokenizer.encode(sentence)
+        with torch.no_grad():
+            output = roberta_model(torch.tensor([tokens]))
+            last_hidden_state = output.last_hidden_state
+            batch_features.append(last_hidden_state.mean(dim=1))
     return batch_features
 
 
@@ -134,7 +142,7 @@ def get_local_maxima(array):
 
 def depth_score_to_topic_change_indexes(
         depth_score_timeseries,
-        meeting_duration,
+        meeting_duration=60*3600,
         topic_segmentation_configs=TopicSegmentationConfig,
 ):
     """
@@ -298,12 +306,11 @@ def topic_segmentation_bert(
 
         depth_score_timeseries = depth_score(block_comparison_score_timeseries)
 
-        meeting_start_time = meeting_data[start_col_name].iloc[0]
-        meeting_end_time = meeting_data[end_col_name].iloc[-1]
-        meeting_duration = meeting_end_time - meeting_start_time
+        # meeting_start_time = meeting_data[start_col_name].iloc[0]
+        # meeting_end_time = meeting_data[end_col_name].iloc[-1]
+        # meeting_duration = meeting_end_time - meeting_start_time
         segments[meeting_id] = depth_score_to_topic_change_indexes(
             depth_score_timeseries,
-            meeting_duration,
             topic_segmentation_configs=topic_segmentation_configs,
         )
         print(segments[meeting_id])
