@@ -53,8 +53,8 @@ def icsi_dataset():
 
     label_df
     """
-    return preprocessing(input_df, 'caption'), label_df
-    # return input_df[input_df['meeting_id'] < 1], label_df[label_df['meeting_id'] < 1]
+    # return preprocessing(input_df, 'caption'), label_df
+    return input_df[input_df['meeting_id'] < 1], label_df[label_df['meeting_id'] < 1]
 
 
 def ami_dataset():
@@ -77,5 +77,5 @@ def ami_dataset():
             FROM {labels}
             WHERE ds = '2021-01-10'
     """
-    return preprocessing(input_df, 'caption'), label_df
-    # return input_df[input_df['meeting_id'] < 1], label_df[label_df['meeting_id'] < 1]
+    # return preprocessing(input_df, 'caption'), label_df
+    return input_df[input_df['meeting_id'] < 1], label_df[label_df['meeting_id'] < 1]

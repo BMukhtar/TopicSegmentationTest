@@ -131,7 +131,7 @@ def get_features_from_sentence(batch_sentences, layer=-2):
         # pooling = torch.nn.AvgPool2d((layer_output.shape[1], 1))
         # sentence_features = pooling(layer_output)
         # batch_features.append(sentence_features[0])
-        tensor = torch.from_numpy(model.encode(sentence)).unsqueeze(0)
+        tensor = model.encode(sentence, convert_to_numpy=False).unsqueeze(0)
         batch_features.append(tensor)
 
     # batch_features = []
