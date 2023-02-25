@@ -78,7 +78,7 @@ def compute_window(timeseries, start_index, end_index):
 
     [window_size, 768] -> [1, 768]
     """
-    stack = torch.stack([features[0] for features in timeseries[start_index:end_index]])
+    stack = torch.stack(timeseries[start_index:end_index])
     stack = stack.unsqueeze(
         0
     )  # https://jbencook.com/adding-a-dimension-to-a-tensor-in-pytorch/
@@ -113,26 +113,6 @@ def get_features_from_sentence(batch_sentences, layer=-2):
     returns a 1-dimensional tensor of size 758
     """
 
-    batch_features = []
-    for sentence in batch_sentences:
-        # tokens = roberta.encode(sentence)
-        # all_layers = roberta.extract_features(tokens, return_all_hiddens=True)
-        # pooling = torch.nn.AvgPool2d((len(tokens), 1))
-        # sentence_features = pooling(all_layers[layer])
-        # batch_features.append(sentence_features[0])
-
-        # inputs = roberta_tokenizer.encode_plus(
-        #     sentence,
-        #     add_special_tokens=True,
-        #     return_tensors='pt'
-        # )
-        # outputs = roberta_model(**inputs, output_hidden_states=True)
-        # layer_output = outputs.hidden_states[layer]
-        # pooling = torch.nn.AvgPool2d((layer_output.shape[1], 1))
-        # sentence_features = pooling(layer_output)
-        # batch_features.append(sentence_features[0])
-        tensor = model.encode(sentence, convert_to_numpy=False).unsqueeze(0)
-        batch_features.append(tensor)
 
     # batch_features = []
     # for sentence in batch_sentences:
@@ -149,7 +129,7 @@ def get_features_from_sentence(batch_sentences, layer=-2):
     #         output = roberta_model(torch.tensor([tokens]))
     #         last_hidden_state = output.last_hidden_state
     #         batch_features.append(last_hidden_state.mean(dim=1))
-    return batch_features
+    return model.encode(batch_sentences, convert_to_numpy=False)
 
 
 def arsort2(array1, array2):
@@ -312,12 +292,7 @@ def topic_segmentation_bert(
     textiling_hyperparameters = topic_segmentation_configs.TEXT_TILING
 
     # parallel inference
-    batches_features = []
-    for batch_sentences in split_list(
-            df[caption_col_name], PARALLEL_INFERENCE_INSTANCES
-    ):
-        batches_features.append(get_features_from_sentence(batch_sentences))
-    features = flatten_features(batches_features)
+    features = get_features_from_sentence(df[caption_col_name])
 
     # meeting_id -> list of topic change start times
     segments = {}
