@@ -21,9 +21,8 @@ def topic_segmentation_random(
         task_idx += 1
 
         meeting_data = df[df[meeting_id_col_name] == meeting_id]
-        meeting_start_times = meeting_data[start_col_name]
         random_segmentation = []
-        for i, _ in enumerate(meeting_start_times):
+        for i, _ in enumerate(meeting_data):
             if random() > random_threshold:
                 random_segmentation.append(i)
         print(random_segmentation)

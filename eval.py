@@ -90,6 +90,8 @@ def binary_labels_flattened(
 
         # we skip first and last labaled segment cause they are naive segments
         for sst in segment_start_times[1:]:
+            if sst >= len(meeting_labels_flattened):
+                sst = -1
             meeting_labels_flattened[sst] = 1
 
         labels_flattened[meeting_id] = meeting_labels_flattened
@@ -161,6 +163,8 @@ def binary_labels_top_level(
 
         # we skip first and last labaled segment cause they are naive segments
         for sst in segment_start_times_high_level[1:]:
+            if sst >= len(meeting_labels_top_level):
+                sst = -1
             meeting_labels_top_level[sst] = 1
 
         labels_top_level[meeting_id] = meeting_labels_top_level
