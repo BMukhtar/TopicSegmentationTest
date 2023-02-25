@@ -132,6 +132,8 @@ def get_features_from_sentence(batch_sentences, layer=-2):
         sentence_features = pooling(layer_output)
         batch_features.append(sentence_features[0])
 
+        # batch_features.append(np.array([model.encode(sentence)]))
+
     # batch_features = []
     # for sentence in batch_sentences:
     #     tokens = roberta_tokenizer.encode(sentence)

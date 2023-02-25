@@ -1,4 +1,5 @@
 import eval
+import logging
 from custom_types import (
     TopicSegmentationAlgorithm,
     TopicSegmentationDatasets,
@@ -8,6 +9,7 @@ from custom_types import (
 
 
 def main():
+    logging.root.setLevel(logging.INFO)
     eval.eval_topic_segmentation(
         TopicSegmentationDatasets.AMI,
         TopicSegmentationAlgorithm.SBERT,
