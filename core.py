@@ -5,11 +5,18 @@ import pandas as pd
 import torch
 
 from transformers import RobertaConfig, RobertaModel, RobertaTokenizer
+from transformers import AutoTokenizer, AutoModel
+
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer('all-mpnet-base-v2')
 
 # pretrained roberta model
 configuration = RobertaConfig()
 roberta_model = RobertaModel.from_pretrained("roberta-base")
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
+
+# roberta = torch.hub.load('pytorch/fairseq', 'roberta.base')
+# roberta.eval()
 
 from custom_types import (
     TopicSegmentationAlgorithm,
@@ -105,20 +112,41 @@ def get_features_from_sentence(batch_sentences, layer=-2):
 
     returns a 1-dimensional tensor of size 758
     """
+
+    batch_features = []
+    for sentence in batch_sentences:
+        # tokens = roberta.encode(sentence)
+        # all_layers = roberta.extract_features(tokens, return_all_hiddens=True)
+        # pooling = torch.nn.AvgPool2d((len(tokens), 1))
+        # sentence_features = pooling(all_layers[layer])
+        # batch_features.append(sentence_features[0])
+
+        inputs = roberta_tokenizer.encode_plus(
+            sentence,
+            add_special_tokens=True,
+            return_tensors='pt'
+        )
+        outputs = roberta_model(**inputs, output_hidden_states=True)
+        layer_output = outputs.hidden_states[layer]
+        pooling = torch.nn.AvgPool2d((layer_output.shape[1], 1))
+        sentence_features = pooling(layer_output)
+        batch_features.append(sentence_features[0])
+
     # batch_features = []
     # for sentence in batch_sentences:
     #     tokens = roberta_tokenizer.encode(sentence)
-    #     all_layers = roberta_model.extract_features(tokens, return_all_hiddens=True)
-    #     pooling = torch.nn.AvgPool2d((len(tokens), 1))
-    #     sentence_features = pooling(all_layers[layer])
-    #     batch_features.append(sentence_features[0])
-    batch_features = []
-    for sentence in batch_sentences:
-        tokens = roberta_tokenizer.encode(sentence)
-        with torch.no_grad():
-            output = roberta_model(torch.tensor([tokens]))
-            last_hidden_state = output.last_hidden_state
-            batch_features.append(last_hidden_state.mean(dim=1))
+    #     with torch.no_grad():
+    #         output = roberta_model(torch.tensor([tokens]))
+    #         last_hidden_state = output.last_hidden_state
+    #         batch_features.append(last_hidden_state.mean(dim=1))
+
+    # batch_features = []
+    # for sentence in batch_sentences:
+    #     tokens = model.encode(sentence).tolist()
+    #     with torch.no_grad():
+    #         output = roberta_model(torch.tensor([tokens]))
+    #         last_hidden_state = output.last_hidden_state
+    #         batch_features.append(last_hidden_state.mean(dim=1))
     return batch_features
 
 
@@ -261,7 +289,14 @@ def topic_segmentation(
             df, meeting_id_col_name, start_col_name, end_col_name, caption_col_name
         )
     else:
-        raise NotImplementedError("Algorithm not implemented")
+        return topic_segmentation_bert(
+            df,
+            meeting_id_col_name,
+            start_col_name,
+            end_col_name,
+            caption_col_name,
+            topic_segmentation_config,
+        )
 
 
 def topic_segmentation_bert(
