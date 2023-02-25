@@ -11,9 +11,9 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('all-mpnet-base-v2')
 
 # pretrained roberta model
-configuration = RobertaConfig()
-roberta_model = RobertaModel.from_pretrained("roberta-base")
-roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
+# configuration = RobertaConfig()
+# roberta_model = RobertaModel.from_pretrained("roberta-base")
+# roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
 # roberta = torch.hub.load('pytorch/fairseq', 'roberta.base')
 # roberta.eval()
@@ -121,18 +121,18 @@ def get_features_from_sentence(batch_sentences, layer=-2):
         # sentence_features = pooling(all_layers[layer])
         # batch_features.append(sentence_features[0])
 
-        inputs = roberta_tokenizer.encode_plus(
-            sentence,
-            add_special_tokens=True,
-            return_tensors='pt'
-        )
-        outputs = roberta_model(**inputs, output_hidden_states=True)
-        layer_output = outputs.hidden_states[layer]
-        pooling = torch.nn.AvgPool2d((layer_output.shape[1], 1))
-        sentence_features = pooling(layer_output)
-        batch_features.append(sentence_features[0])
-
-        # batch_features.append(np.array([model.encode(sentence)]))
+        # inputs = roberta_tokenizer.encode_plus(
+        #     sentence,
+        #     add_special_tokens=True,
+        #     return_tensors='pt'
+        # )
+        # outputs = roberta_model(**inputs, output_hidden_states=True)
+        # layer_output = outputs.hidden_states[layer]
+        # pooling = torch.nn.AvgPool2d((layer_output.shape[1], 1))
+        # sentence_features = pooling(layer_output)
+        # batch_features.append(sentence_features[0])
+        tensor = torch.from_numpy(model.encode(sentence)).unsqueeze(0)
+        batch_features.append(tensor)
 
     # batch_features = []
     # for sentence in batch_sentences:
