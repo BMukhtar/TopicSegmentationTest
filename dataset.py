@@ -1,4 +1,8 @@
 import sys
+import pandas as pd
+
+input_df = pd.read_csv('./train.csv')
+label_df = pd.read_csv('./test.csv')
 
 def preprocessing(df, caption_col_name):
     fillers = ["um", "uh", "oh", "hmm", "you know", "like"]
@@ -21,6 +25,7 @@ def preprocessing(df, caption_col_name):
     df.reset_index(inplace=True)
 
     return df
+
 
 
 def icsi_dataset():
@@ -72,5 +77,3 @@ def ami_dataset():
             WHERE ds = '2021-01-10'
     """
     return input_df, label_df
-
-

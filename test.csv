@@ -1,0 +1,94 @@
+,meeting_id,st,en,topic
+0,0,10,97,Tool training on the conceptual design of remote control related animal characteristics
+1,0,84,215,Project plan and target revenue
+2,0,97,236,Brainstorming functional design on technical function and detailed design
+3,1,0,47,Introduction of a prototype
+4,1,48,76,Evaluation criteria of remote control
+6,1,77,152,Production costs of the product
+5,1,153,389,Evaluation criteria of remote control
+7,1,390,430,Production costs of the product
+8,1,431,667,Evaluation of the project
+9,2,13,29,Brief summary about last meeting
+10,2,31,43,Feedback on the design of remote control device
+11,2,62,351,Design and availability of actual components
+12,2,353,545,Customer needs and feasibility of design and competitors' study
+13,2,546,603,Wrap up of the meeting
+14,3,4,4,Product features
+18,3,6,18,Tool training
+15,3,19,34,Product features
+17,3,35,112,Work division of the project
+16,3,113,140,Product features
+19,3,141,279,Tool training
+20,4,0,120,Presentation and discussion on functional requirements
+21,4,121,272,Presentation and discussion on technical function design
+22,4,273,678,Presentation and discussion on working design
+23,5,0,58,Team building and meeting agenda
+24,5,58,188,Remote control style
+26,5,189,235,Energy source of remote control
+28,5,236,325,User interface controls of remote control
+27,5,326,340,Energy source of remote control
+25,5,341,381,Remote control style
+29,5,382,433,User interface controls of remote control
+30,5,434,621,Work plan for the next phase and wrap-up of the meeting
+31,6,0,17,A brief review of the last meeting
+32,6,21,85,Battery issue and flip top design
+33,6,117,478,Market research and adjustments due to new project requirements
+34,6,479,522,Summary of the new project requirements
+35,7,2,9,Review of last meeting
+36,7,18,63,Conceptual component design and discussion of potential materials with current trend
+38,7,64,157,Conceptual user interface design and discussion on necessity of screen
+39,7,158,202,Conceptual physical attributes
+37,7,267,437,Conceptual component design and discussion of potential materials with current trend
+40,7,473,513,Potential options of energy
+41,8,0,298,Presentation on the prototype
+42,8,299,673,Discussion about the evaluation criteria
+43,8,674,922,Discussion about the project finance and the use of drawing board
+44,9,12,130,Agenda announcement and team ice breaking
+45,9,131,171,Price issue and target groups of remote control
+46,9,173,311,Remote control style and design optimization
+47,10,20,316,User interface design
+49,10,386,451,"Industrial Design: material, alimentation, and chip"
+50,10,452,485,User requirements
+51,10,500,529,User requirements
+48,10,530,575,User interface design
+52,11,1,52,Functional design on the remote control
+53,11,69,375,New project requirement on remote control function
+54,12,0,110,Presentation on the market trend
+55,12,111,218,Presentation on technical function design
+56,12,219,370,Presentation on component design
+57,12,371,838,Discussion about remote control features
+58,13,0,106,Team building and scope of the project
+59,13,107,118,Remote control functions
+61,13,119,136,Connection of remote control and TV
+60,13,137,186,Remote control functions
+63,13,187,277,Button design of remote control
+62,13,278,297,Connection of remote control and TV
+64,14,24,56,New project requirements
+65,14,57,84,User Interface design of remote control
+67,14,85,271,Technical issues of the project
+66,14,272,481,User Interface design of remote control
+68,14,482,504,Technical issues of the project
+69,14,505,606,Wrap-up of the meeting
+70,15,0,12,Summary of the previous meetings
+71,15,44,112,Presentation on the remote control prototype
+72,15,126,321,Simulation market evaluation of the new remote control
+73,15,335,534,Cost calculation and budget issue
+74,15,547,755,Review of the whole project
+75,16,0,200,The announcement of the agenda and a brief equipment testing
+76,16,201,343,"Conceptual design of the remote control, including the functions and some possible advanced techniques"
+77,16,344,434,"The button layout, the shape and the appearance of the remote control"
+78,17,43,97,Product requirement
+80,17,98,193,Industrial design of the product
+82,17,199,207,Product appearance
+81,17,208,251,Industrial design of the product
+83,17,252,296,Product appearance
+79,17,297,361,Product requirement
+84,17,362,381,Product appearance
+85,18,1,238,Detailed design of the remote control
+86,18,239,398,Discussion on changing an aspect of the remote
+87,18,399,598,Discussion on the process of the project
+88,19,45,116,Product appearance
+91,19,117,142,Industrial design and quotation
+90,19,143,538,Product evaluation
+89,19,195,206,Product appearance
+92,19,539,882,Industrial design and quotation
