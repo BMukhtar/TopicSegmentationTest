@@ -8,4 +8,6 @@ WinDiff on 20 meetings: 0.6785025784210941
 Pk on 20 meetings: 0.577958783118425
 WinDiff on 20 meetings: 0.6785025784210941
 
+Elapsed time: 62.955215791997034
+
 all with sentence embed
