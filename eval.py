@@ -78,31 +78,33 @@ def binary_labels_flattened(
 
         meeting_data = input_df[
             input_df[meeting_id_col_name] == meeting_id
-            ]
-        # meeting_sentences = [*map(lambda s: s.lower(), list(meeting_data["caption"]))]
-        meeting_sentences = meeting_data.groupby(['caption_group_id'])['caption'].apply(
-            lambda row: ' '.join(row)).reset_index()
+            ].sort_values(by=[start_col_name])
+        meeting_sentences = [*map(lambda s: s.lower(), list(meeting_data["caption"]))]
 
-        # caption_start_times = list(meeting_data[start_col_name])
+        caption_start_times = list(meeting_data[start_col_name])
         segment_start_times = list(
             labels_df[labels_df[meeting_id_col_name] == meeting_id][start_col_name]
         )
 
-        meeting_labels_flattened = [0] * len(meeting_data.groupby(['caption_group_id']).groups)
+        meeting_labels_flattened = [0] * len(caption_start_times)
 
         # we skip first and last labaled segment cause they are naive segments
         for sst in segment_start_times[1:]:
-            if sst >= len(meeting_labels_flattened):
-                sst = -1
-            meeting_labels_flattened[sst] = 1
+            try:
+                topic_change_index = caption_start_times.index(sst)
+            except ValueError:
+                topic_change_index = bisect(caption_start_times, sst)
+                if topic_change_index == len(meeting_labels_flattened):
+                    topic_change_index -= 1  # bisect my go out of boundary
+            meeting_labels_flattened[topic_change_index] = 1
 
         labels_flattened[meeting_id] = meeting_labels_flattened
 
         logging.info("MEETING TRANSCRIPTS")
-        for index, row in meeting_sentences.iterrows():
-            if meeting_labels_flattened[index] == 1:
-                logging.info("\n\n<<------ Topic Change () ------>>\n")
-            logging.info(row['caption'])
+        for i, sentence in enumerate(meeting_sentences):
+            if meeting_labels_flattened[i] == 1:
+                logging.warning("\n\n<<------ Topic Change () ------>>\n")
+            logging.info(sentence)
 
     return labels_flattened
 
@@ -132,11 +134,10 @@ def binary_labels_top_level(
 
         meeting_data = input_df[
             input_df[meeting_id_col_name] == meeting_id
-            ]
-        # meeting_sentences = [*map(lambda s: s.lower(), list(meeting_data["caption"]))]
-        meeting_sentences = meeting_data.groupby(['caption_group_id'])['caption'].apply(
-            lambda row: ' '.join(row)).reset_index()
+            ].sort_values(by=[start_col_name])
+        meeting_sentences = [*map(lambda s: s.lower(), list(meeting_data["caption"]))]
 
+        caption_start_times = list(meeting_data[start_col_name])
         segment_start_times = list(
             labels_df[labels_df[meeting_id_col_name] == meeting_id][start_col_name]
         )
@@ -144,7 +145,7 @@ def binary_labels_top_level(
             labels_df[labels_df[meeting_id_col_name] == meeting_id][end_col_name]
         )
 
-        meeting_labels_top_level = [0] * len(meeting_data.groupby(['caption_group_id']).groups)
+        meeting_labels_top_level = [0] * len(caption_start_times)
 
         high_level_topics_indexes = []
         i = 0
@@ -167,17 +168,21 @@ def binary_labels_top_level(
 
         # we skip first and last labaled segment cause they are naive segments
         for sst in segment_start_times_high_level[1:]:
-            if sst >= len(meeting_labels_top_level):
-                sst = -1
-            meeting_labels_top_level[sst] = 1
+            try:
+                topic_change_index = caption_start_times.index(sst)
+            except ValueError:
+                topic_change_index = bisect(caption_start_times, sst)
+                if topic_change_index == len(meeting_labels_top_level):
+                    topic_change_index -= 1  # bisect my go out of boundary
+            meeting_labels_top_level[topic_change_index] = 1
 
         labels_top_level[meeting_id] = meeting_labels_top_level
 
         logging.info("MEETING TRANSCRIPTS")
-        for index, row in meeting_sentences.iterrows():
-            if meeting_labels_top_level[index] == 1:
-                logging.info("\n\n<<------ Topic Change () ------>>\n")
-            logging.info(row['caption'])
+        for i, sentence in enumerate(meeting_sentences):
+            if meeting_labels_top_level[i] == 1:
+                logging.warning("\n\n<<------ Topic Change () ------>>\n")
+            logging.info(sentence)
 
     return labels_top_level
 
@@ -230,7 +235,6 @@ def eval_topic_segmentation(
         CAPTION_COL_NAME,
     )
 
-    print("metrics")
     flattened_metrics = compute_metrics(
         prediction_segmentations, flattened, metric_name_suffix="flattened"
     )

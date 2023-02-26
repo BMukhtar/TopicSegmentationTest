@@ -318,11 +318,12 @@ def topic_segmentation_bert(
 
         depth_score_timeseries = depth_score(block_comparison_score_timeseries)
 
-        # meeting_start_time = meeting_data[start_col_name].iloc[0]
-        # meeting_end_time = meeting_data[end_col_name].iloc[-1]
-        # meeting_duration = meeting_end_time - meeting_start_time
+        meeting_start_time = meeting_data[start_col_name].iloc[0]
+        meeting_end_time = meeting_data[end_col_name].iloc[-1]
+        meeting_duration = meeting_end_time - meeting_start_time
         segments[meeting_id] = depth_score_to_topic_change_indexes(
             depth_score_timeseries,
+            meeting_duration,
             topic_segmentation_configs=topic_segmentation_configs,
         )
         print(segments[meeting_id])
