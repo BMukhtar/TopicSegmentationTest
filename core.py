@@ -167,8 +167,8 @@ def depth_score_to_topic_change_indexes(
         depth_score_timeseries
     )
 
-    print("DEPTH_SCORE_TIMESERIES:")
-    print(list(depth_score_timeseries))
+    # print("DEPTH_SCORE_TIMESERIES:")
+    # print(list(depth_score_timeseries))
 
     if depth_score_timeseries == []:
         return []
@@ -209,8 +209,8 @@ def depth_score_to_topic_change_indexes(
         local_maxima = filtered_local_maxima
         local_maxima_indices = filtered_local_maxima_indices
 
-    print("LOCAL_MAXIMA_INDICES:")
-    print(list(local_maxima_indices))
+    # print("LOCAL_MAXIMA_INDICES:")
+    # print(list(local_maxima_indices))
 
     return local_maxima_indices
 
@@ -326,6 +326,5 @@ def topic_segmentation_bert(
             meeting_duration,
             topic_segmentation_configs=topic_segmentation_configs,
         )
-        print(segments[meeting_id])
 
     return segments

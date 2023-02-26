@@ -18,7 +18,8 @@ from nltk.metrics.segmentation import pk, windowdiff
 
 def compute_metrics(prediction_segmentations, binary_labels, metric_name_suffix=""):
     print(prediction_segmentations)
-    print(binary_labels)
+    indices = {k: [i for i, v in enumerate(binary_labels[k]) if v == 1] for k in binary_labels.keys() }
+    print(indices)
     _pk, _windiff = [], []
     for meeting_id, reference_segmentation in binary_labels.items():
 
@@ -103,7 +104,7 @@ def binary_labels_flattened(
         logging.info("MEETING TRANSCRIPTS")
         for i, sentence in enumerate(meeting_sentences):
             if meeting_labels_flattened[i] == 1:
-                logging.warning("\n\n<<------ Topic Change () ------>>\n")
+                logging.info("\n\n<<------ Topic Change () ------>>\n")
             logging.info(sentence)
 
     return labels_flattened
@@ -181,7 +182,7 @@ def binary_labels_top_level(
         logging.info("MEETING TRANSCRIPTS")
         for i, sentence in enumerate(meeting_sentences):
             if meeting_labels_top_level[i] == 1:
-                logging.warning("\n\n<<------ Topic Change () ------>>\n")
+                logging.info("\n\n<<------ Topic Change () ------>>\n")
             logging.info(sentence)
 
     return labels_top_level
@@ -226,21 +227,21 @@ def eval_topic_segmentation(
         CAPTION_COL_NAME,
     )
 
-    top_level = binary_labels_top_level(
-        input_df,
-        label_df,
-        MEETING_ID_COL_NAME,
-        START_COL_NAME,
-        EN_COL_NAME,
-        CAPTION_COL_NAME,
-    )
+    # top_level = binary_labels_top_level(
+    #     input_df,
+    #     label_df,
+    #     MEETING_ID_COL_NAME,
+    #     START_COL_NAME,
+    #     EN_COL_NAME,
+    #     CAPTION_COL_NAME,
+    # )
 
     flattened_metrics = compute_metrics(
         prediction_segmentations, flattened, metric_name_suffix="flattened"
     )
-    top_level_metrics = compute_metrics(
-        prediction_segmentations, top_level, metric_name_suffix="top_level"
-    )
+    # top_level_metrics = compute_metrics(
+    #     prediction_segmentations, top_level, metric_name_suffix="top_level"
+    # )
 
     def merge_metrics(*metrics):
         res = {}
