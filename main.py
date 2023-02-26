@@ -14,7 +14,8 @@ def main():
     eval.eval_topic_segmentation(
         TopicSegmentationDatasets.AMI,
         TopicSegmentationAlgorithm.SBERT,
-        TopicSegmentationConfig(TextTilingHyperparameters()),
+        TopicSegmentationConfig(TextTilingHyperparameters(TOPIC_CHANGE_THRESHOLD=0.7, SMOOTHING_WINDOW=2),
+                                MAX_SEGMENTS_CAP=False),
     )
 
 

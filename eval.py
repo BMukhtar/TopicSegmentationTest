@@ -19,7 +19,7 @@ from nltk.metrics.segmentation import pk, windowdiff
 def compute_metrics(prediction_segmentations, binary_labels, metric_name_suffix=""):
     print(prediction_segmentations)
     indices = {k: [i for i, v in enumerate(binary_labels[k]) if v == 1] for k in binary_labels.keys() }
-    print(indices)
+    print(f'expected: {indices}')
     _pk, _windiff = [], []
     for meeting_id, reference_segmentation in binary_labels.items():
 
@@ -227,21 +227,21 @@ def eval_topic_segmentation(
         CAPTION_COL_NAME,
     )
 
-    # top_level = binary_labels_top_level(
-    #     input_df,
-    #     label_df,
-    #     MEETING_ID_COL_NAME,
-    #     START_COL_NAME,
-    #     EN_COL_NAME,
-    #     CAPTION_COL_NAME,
-    # )
+    top_level = binary_labels_top_level(
+        input_df,
+        label_df,
+        MEETING_ID_COL_NAME,
+        START_COL_NAME,
+        EN_COL_NAME,
+        CAPTION_COL_NAME,
+    )
 
     flattened_metrics = compute_metrics(
         prediction_segmentations, flattened, metric_name_suffix="flattened"
     )
-    # top_level_metrics = compute_metrics(
-    #     prediction_segmentations, top_level, metric_name_suffix="top_level"
-    # )
+    top_level_metrics = compute_metrics(
+        prediction_segmentations, top_level, metric_name_suffix="top_level"
+    )
 
     def merge_metrics(*metrics):
         res = {}

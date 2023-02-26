@@ -55,8 +55,8 @@ def icsi_dataset():
     """
     train = input_df
     test = label_df
-    train = train[input_df['meeting_id'] < 1]
-    test = test[label_df['meeting_id'] < 1]
+    # train = train[input_df['meeting_id'] < 1]
+    # test = test[label_df['meeting_id'] < 1]
     train = preprocessing(train, 'caption')
     return train, test
 
@@ -83,7 +83,7 @@ def ami_dataset():
     """
     train = input_df
     test = label_df
-    train = train[input_df['meeting_id'] < 1]
-    test = test[label_df['meeting_id'] < 1]
+    # train = train[input_df['meeting_id'] < 1]
+    # test = test[label_df['meeting_id'] < 1]
     train = preprocessing(train, 'caption')
     return train, test
