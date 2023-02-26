@@ -204,7 +204,7 @@ def depth_score_to_topic_change_indexes(
         for i, m in enumerate(local_maxima):
             if m > threshold:
                 filtered_local_maxima.append(m)
-                filtered_local_maxima_indices.append(i)
+                filtered_local_maxima_indices.append(local_maxima_indices[i])
 
         local_maxima = filtered_local_maxima
         local_maxima_indices = filtered_local_maxima_indices
