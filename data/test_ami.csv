@@ -1,94 +1,94 @@
 meeting_id,st,en,topic
-0,57041,403461,Tool training on the conceptual design of remote control related animal characteristics
-0,347901,838541,Project plan and target revenue
-0,403461,886101,Brainstorming functional design on technical function and detailed design
-1,1,164481,Introduction of a prototype
-1,165401,231221,Evaluation criteria of remote control
-1,232441,494761,Production costs of the product
-1,495981,1210461,Evaluation criteria of remote control
-1,1210961,1341181,Production costs of the product
-1,1342641,1912421,Evaluation of the project
-2,15981,86661,Brief summary about last meeting
-2,91501,203261,Feedback on the design of remote control device
-2,277141,1538001,Design and availability of actual components
-2,1542841,2303981,Customer needs and feasibility of design and competitors' study
-2,2304541,2500241,Wrap up of the meeting
-3,8401,8401,Product features
-3,50701,76101,Tool training
-3,77021,139041,Product features
-3,142021,320961,Work division of the project
-3,321701,387001,Product features
-3,388361,632321,Tool training
-4,1,558801,Presentation and discussion on functional requirements
-4,559361,1097701,Presentation and discussion on technical function design
-4,1101461,2355901,Presentation and discussion on working design
-5,1,170021,Team building and meeting agenda
-5,170021,662581,Remote control style
-5,663761,866081,Energy source of remote control
-5,866641,1306061,User interface controls of remote control
-5,1306381,1370281,Energy source of remote control
-5,1372761,1484441,Remote control style
-5,1487221,1658981,User interface controls of remote control
-5,1660681,2284121,Work plan for the next phase and wrap-up of the meeting
-6,1,66001,A brief review of the last meeting
-6,95441,624661,Battery issue and flip top design
-6,686101,2237881,Market research and adjustments due to new project requirements
-6,2242001,2414461,Summary of the new project requirements
-7,4801,28761,Review of last meeting
-7,55421,351281,Conceptual component design and discussion of potential materials with current trend
-7,352201,772841,Conceptual user interface design and discussion on necessity of screen
-7,773941,936561,Conceptual physical attributes
-7,1155221,1603581,Conceptual component design and discussion of potential materials with current trend
-7,1690101,1844601,Potential options of energy
-8,1,902121,Presentation on the prototype
-8,904181,1922741,Discussion about the evaluation criteria
-8,1923301,2485441,Discussion about the project finance and the use of drawing board
-9,29461,391081,Agenda announcement and team ice breaking
-9,392001,486701,Price issue and target groups of remote control
-9,488781,987641,Remote control style and design optimization
-10,37501,1029381,User interface design
-10,1170421,1441561,"Industrial Design: material, alimentation, and chip"
-10,1442121,1610561,User requirements
-10,1649221,1710341,User requirements
-10,1710901,1851521,User interface design
-11,561,298701,Functional design on the remote control
-11,571641,1648761,New project requirement on remote control function
-12,1,399761,Presentation on the market trend
-12,401941,852301,Presentation on technical function design
-12,854881,1249661,Presentation on component design
-12,1255221,2579621,Discussion about remote control features
-13,1,488721,Team building and scope of the project
-13,514941,602161,Remote control functions
-13,603701,674221,Connection of remote control and TV
-13,678381,863521,Remote control functions
-13,864681,1144841,Button design of remote control
-13,1145401,1208241,Connection of remote control and TV
-14,42481,186841,New project requirements
-14,197921,322861,User Interface design of remote control
-14,324841,1074221,Technical issues of the project
-14,1081441,1800621,User Interface design of remote control
-14,1812681,1877901,Technical issues of the project
-14,1880621,2251701,Wrap-up of the meeting
-15,1,21401,Summary of the previous meetings
-15,112161,413861,Presentation on the remote control prototype
-15,435661,1088861,Simulation market evaluation of the new remote control
-15,1113381,1664841,Cost calculation and budget issue
-15,1702601,2339001,Review of the whole project
-16,1,496981,The announcement of the agenda and a brief equipment testing
-16,497421,911741,"Conceptual design of the remote control, including the functions and some possible advanced techniques"
-16,912301,1162661,"The button layout, the shape and the appearance of the remote control"
-17,85181,273861,Product requirement
-17,275561,656881,Industrial design of the product
-17,678401,732201,Product appearance
-17,732761,941381,Industrial design of the product
-17,942961,1097541,Product appearance
-17,1097981,1296621,Product requirement
-17,1299701,1354661,Product appearance
-18,44881,730961,Detailed design of the remote control
-18,735321,1206121,Discussion on changing an aspect of the remote
-18,1206621,1842521,Discussion on the process of the project
-19,100041,335241,Product appearance
-19,335741,404701,Industrial design and quotation
-19,407201,1393161,Product evaluation
-19,525141,546221,Product appearance
-19,1395361,2244801,Industrial design and quotation
+0,53220,373560,Tool training on the conceptual design of remote control related animal characteristics
+0,322140,780000,Project plan and target revenue
+0,373560,823080,Brainstorming functional design on technical function and detailed design
+1,0,152700,Introduction of a prototype
+1,153420,212100,Evaluation criteria of remote control
+1,213120,456660,Production costs of the product
+1,457680,1110960,Evaluation criteria of remote control
+1,1111260,1231380,Production costs of the product
+1,1232640,1743600,Evaluation of the project
+2,12960,79740,Brief summary about last meeting
+2,84180,192000,Feedback on the design of remote control device
+2,260820,1458000,Design and availability of actual components
+2,1462440,2179440,Customer needs and feasibility of design and competitors' study
+2,2179800,2363400,Wrap up of the meeting
+3,7320,7320,Product features
+3,48240,71100,Tool training
+3,71820,129720,Product features
+3,132360,293940,Work division of the project
+3,294480,353400,Product features
+3,354420,564480,Tool training
+4,0,521220,Presentation and discussion on functional requirements
+4,521580,1019220,Presentation and discussion on technical function design
+4,1022640,2169480,Presentation and discussion on working design
+5,0,154920,Team building and meeting agenda
+5,154920,612240,Remote control style
+5,613080,803400,Energy source of remote control
+5,803760,1215720,User interface controls of remote control
+5,1215840,1275540,Energy source of remote control
+5,1277820,1379820,Remote control style
+5,1382400,1541160,User interface controls of remote control
+5,1542660,2116800,Work plan for the next phase and wrap-up of the meeting
+6,0,61620,A brief review of the last meeting
+6,89700,600240,Battery issue and flip top design
+6,654300,2122680,Market research and adjustments due to new project requirements
+6,2126460,2288640,Summary of the new project requirements
+7,4260,26400,Review of last meeting
+7,51120,331680,Conceptual component design and discussion of potential materials with current trend
+7,332400,731220,Conceptual user interface design and discussion on necessity of screen
+7,732120,883980,Conceptual physical attributes
+7,1087260,1497840,Conceptual component design and discussion of potential materials with current trend
+7,1575900,1718760,Potential options of energy
+8,0,824460,Presentation on the prototype
+8,826320,1751040,Discussion about the evaluation criteria
+8,1751400,2252040,Discussion about the project finance and the use of drawing board
+9,26220,359760,Agenda announcement and team ice breaking
+9,360480,446340,Price issue and target groups of remote control
+9,448020,915360,Remote control style and design optimization
+10,33360,954420,User interface design
+10,1079220,1335540,"Industrial Design: material, alimentation, and chip"
+10,1335900,1495500,User requirements
+10,1530600,1585500,User requirements
+10,1585860,1715940,User interface design
+11,360,282000,Functional design on the remote control
+11,548040,1551780,New project requirement on remote control function
+12,0,368520,Presentation on the market trend
+12,370500,788820,Presentation on technical function design
+12,790920,1147800,Presentation on component design
+12,1153020,2358960,Discussion about remote control features
+13,0,455760,Team building and scope of the project
+13,481500,564840,Remote control functions
+13,566040,632040,Connection of remote control and TV
+13,636000,808680,Remote control functions
+13,809640,1068300,Button design of remote control
+13,1068660,1126860,Connection of remote control and TV
+14,36840,171720,New project requirements
+14,182040,299760,User Interface design of remote control
+14,301260,1000140,Technical issues of the project
+14,1007160,1672920,User Interface design of remote control
+14,1684500,1744620,Technical issues of the project
+14,1747140,2091720,Wrap-up of the meeting
+15,0,18720,Summary of the previous meetings
+15,101400,386700,Presentation on the remote control prototype
+15,405000,1008420,Simulation market evaluation of the new remote control
+15,1029300,1534800,Cost calculation and budget issue
+15,1569120,2157480,Review of the whole project
+16,0,445500,The announcement of the agenda and a brief equipment testing
+16,445740,828300,"Conceptual design of the remote control, including the functions and some possible advanced techniques"
+16,828660,1059900,"The button layout, the shape and the appearance of the remote control"
+17,75180,250260,Product requirement
+17,251760,609600,Industrial design of the product
+17,629640,681000,Product appearance
+17,681360,877740,Industrial design of the product
+17,879120,1023780,Product appearance
+17,1024020,1207620,Product requirement
+17,1210500,1260120,Product appearance
+18,43140,666000,Detailed design of the remote control
+18,670020,1102440,Discussion on changing an aspect of the remote
+18,1102740,1690440,Discussion on the process of the project
+19,89640,305880,Product appearance
+19,306180,369300,Industrial design and quotation
+19,371460,1266240,Product evaluation
+19,478440,497040,Product appearance
+19,1268100,2034240,Industrial design and quotation
