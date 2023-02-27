@@ -1,5 +1,5 @@
 ,meeting_id,start_index,end_index,summary,start_time,end_time,topic
-0,./data/episode_001_large.vtt,0,16,,0:00:00.000,0:00:47.097," As part of MIT course 6S099, Artificial General Intelligence,
+0,./data/episode_001_large.vtt,0,16," As part of MIT course 6S099, Artificial General Intelligence, I've gotten the chance to sit down with Max Tegmark .",0:00:00.000,0:00:47.979," As part of MIT course 6S099, Artificial General Intelligence,
  I've gotten the chance to sit down with Max Tegmark.
  He is a professor here at MIT.
  He's a physicist, spent a large part of his career
@@ -15,7 +15,7 @@
  He's truly an out of the box thinker and a fun personality,
  so I really enjoy talking to him.
  If you'd like to see more of these videos in the future,"
-1,./data/episode_001_large.vtt,16,33,,0:00:47.097,0:01:36.016," please subscribe and also click the little bell icon
+1,./data/episode_001_large.vtt,16,33," The mystery of human existence lies not in just staying alive, but in finding something to live for . Every failure rewards us with an opportunity",0:00:47.979,0:01:36.159," please subscribe and also click the little bell icon
  to make sure you don't miss any videos.
  Also, Twitter, LinkedIn, agi.mit.edu
  if you wanna watch other lectures
@@ -32,7 +32,7 @@
  to fail in so many new and exciting ways
  and this conversation was no different.
  I've learned about something called"
-2,./data/episode_001_large.vtt,33,339,,0:01:36.016,0:15:34.056," radio frequency interference, RFI, look it up.
+2,./data/episode_001_large.vtt,33,339," Radio frequency interference, RFI, is an exceptionally difficult sound source to remove . The probability of intelligent life on any given planet is some",0:01:36.159,0:15:34.559," radio frequency interference, RFI, look it up.
  Apparently, music and conversations
  from local radio stations can bleed into the audio
  that you're recording in such a way
@@ -338,7 +338,7 @@
  if you realized that it was just a glossed up tape recorder,
  you know, that was just zombie and was a faking emotion?
  Would you prefer that it actually had an experience"
-3,./data/episode_001_large.vtt,339,381,,0:15:34.056,0:17:19.016," or would you prefer that it's actually
+3,./data/episode_001_large.vtt,339,381," It's hard to really know the difference between everything seeming like there's consciousness present, there's intelligence present and there's affection, passion",0:15:34.559,0:17:19.160," or would you prefer that it's actually
  not experiencing anything so you feel,
  you don't have to feel guilty about what you do to it?
  It's such a difficult question because, you know,
@@ -380,7 +380,7 @@
  these self serving arguments
  that other entities aren't conscious.
  You know, people often say,"
-4,./data/episode_001_large.vtt,381,416,,0:17:19.016,0:18:47.011," oh, these animals can't feel pain.
+4,./data/episode_001_large.vtt,381,416, Scientists are trying to find out what makes the difference between unconscious and conscious behavior . They say it helps a lot to have a physical embodiment,0:17:19.160,0:18:47.119," oh, these animals can't feel pain.
  It's okay to boil lobsters because we ask them
  if it hurt and they didn't say anything.
  And now there was just a paper out saying,
@@ -415,7 +415,7 @@
  that are important to us humans, for sure.
  But I don't think the physical embodiment
  is necessary after you've learned it"
-5,./data/episode_001_large.vtt,416,569,,0:18:47.011,0:26:07.096," to just have the experience.
+5,./data/episode_001_large.vtt,416,569," Darwinian evolution endowed us with a self preservation instinct because those that didn't have those genes got cleaned out of the gene pool, right",0:18:47.119,0:26:07.960," to just have the experience.
  Think about when you're dreaming, right?
  Your eyes are closed.
  You're not getting any sensory input.
@@ -568,7 +568,7 @@
  based on what we understand about cosmology
  everything is in our universe is probably
  ultimately probably finite, although."
-6,./data/episode_001_large.vtt,569,804,,0:26:07.096,0:37:31.005," Big crunch or big, what's the, the infinite expansion.
+6,./data/episode_001_large.vtt,569,804," There's still no machine that can match a human child in general intelligence but artificial general intelligence, AGI, is by its very definition",0:26:07.960,0:37:31.599," Big crunch or big, what's the, the infinite expansion.
  Yeah, we could have a big chill or a big crunch
  or a big rip or that's the big snap or death bubbles.
  All of them are more than a billion years away.
@@ -803,7 +803,7 @@
  But that's not necessarily what I mean by creativity.
  Is it important on that complex goals
  where the sea is rising for there"
-7,./data/episode_001_large.vtt,804,1162,,0:37:31.005,0:54:45.007," to be something creative?
+7,./data/episode_001_large.vtt,804,1162," Human intelligence is an aspect of intelligence, says David Bingham . He says we have to be careful with human vanity when it comes to",0:37:31.599,0:54:45.079," to be something creative?
  Or am I being very human centric and thinking creativity
  somehow special relative to intelligence?
  My hunch is that we should think of creativity simply
@@ -1161,7 +1161,7 @@
  And if it can only reply,
  I was trained on five terabytes of data
  and this is my diagnosis, boop, boop, beep, beep."
-8,./data/episode_001_large.vtt,1162,1385,,0:54:45.007,0:04:41.007," It doesn't really instill a lot of confidence, right?
+8,./data/episode_001_large.vtt,1162,1385, CNN's John Sutter talks to DeepMind's Demis Hassabis on deep learning and deep learning AI . He says AI can be,0:54:45.079,1:04:41.079," It doesn't really instill a lot of confidence, right?
  So I think we have a lot of work to do
  on communication there.
  So what kind of, I think you're doing a little bit of work
@@ -1384,7 +1384,7 @@
  but we were able to show an additional cool fact there,
  which is that even incredibly simple problems,
  like suppose I give you a thousand numbers"
-9,./data/episode_001_large.vtt,1385,1415,,1:04:41.000,0:06:03.002," and ask you to multiply them together,
+9,./data/episode_001_large.vtt,1385,1415," In some Hollywood movies, the way they get AGI is building a quantum computer. Because the word quantum sounds cool and so on.",1:04:41.079,1:06:03.199," and ask you to multiply them together,
  and you can write a few lines of code, boom, done, trivial.
  If you just try to do that with a neural network
  that has only one single hidden layer in it,
@@ -1414,7 +1414,7 @@
  I suspect your brain is not a quantum computer
  in any profound sense.
  So you don't even wrote a paper about that"
-10,./data/episode_001_large.vtt,1415,1514,,1:06:03.000,0:10:18.024," a lot many years ago.
+10,./data/episode_001_large.vtt,1415,1514," In the future, we may use quantum computers to help train neural networks better than the brain . Quantum computers could be used to solve complex",1:06:03.199,1:10:18.239," a lot many years ago.
  I calculated the so called decoherence time,
  how long it takes until the quantum computerness
  of what your neurons are doing gets erased
@@ -1513,7 +1513,7 @@
  So we should be proactive about it
  and ask ourselves what sort of future
  we would like to have happen."
-11,./data/episode_001_large.vtt,1514,1552,,1:10:18.000,0:12:08.043," We're going to make it like that.
+11,./data/episode_001_large.vtt,1514,1552, He says he doesn't like people to be terrified and panicking . He says panicking is not going to help in any way .,1:10:18.239,1:12:08.439," We're going to make it like that.
  Well, what I prefer is just some sort of incredibly boring,
  zombie like future where there's all these
  mechanical things happening and there's no passion,
@@ -1551,7 +1551,7 @@
  about the problems and risks,
  to also remember how huge the upsides can be
  if we get it right, right?"
-12,./data/episode_001_large.vtt,1552,1603,,1:12:08.000,0:14:28.001," Everything we love about society and civilization
+12,./data/episode_001_large.vtt,1552,1603," Everything we love about society and civilization is a product of intelligence, he says . He says dismissing the risk is not one of the things",1:12:08.439,1:14:28.199," Everything we love about society and civilization
  is a product of intelligence.
  So if we can amplify our intelligence
  with machine intelligence and not anymore lose our loved one
@@ -1602,7 +1602,7 @@
  So start with, don't start thinking about the risks,
  start thinking about the goals.
  And then when you do that,"
-13,./data/episode_001_large.vtt,1603,1623,,1:14:28.000,0:15:15.083," then you can think about the obstacles you want to avoid.
+13,./data/episode_001_large.vtt,1603,1623," Psychiatrist: ""I'm talking about what kind of society do we want to create? That's, I think, a much,",1:14:28.199,1:15:15.840," then you can think about the obstacles you want to avoid.
  I often get students coming in right here into my office
  for career advice.
  I always ask them this very question,
