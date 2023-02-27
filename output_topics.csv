@@ -1,5 +1,5 @@
-,meeting_id,start_index,end_index,summary,topic
-0,./data/episode_001_large.vtt,0,33," As part of MIT course 6S099, Artificial General Intelligence, I sat down with Max Tegmark . Tegmark is a physicist"," As part of MIT course 6S099, Artificial General Intelligence,
+,meeting_id,start_index,end_index,summary,start_time,end_time,topic
+0,./data/episode_001_large.vtt,0,16,,0:00:00.000,0:00:47.097," As part of MIT course 6S099, Artificial General Intelligence,
  I've gotten the chance to sit down with Max Tegmark.
  He is a professor here at MIT.
  He's a physicist, spent a large part of his career
@@ -14,8 +14,8 @@
  Second is Life 3.0.
  He's truly an out of the box thinker and a fun personality,
  so I really enjoy talking to him.
- If you'd like to see more of these videos in the future,
- please subscribe and also click the little bell icon
+ If you'd like to see more of these videos in the future,"
+1,./data/episode_001_large.vtt,16,33,,0:00:47.097,0:01:36.016," please subscribe and also click the little bell icon
  to make sure you don't miss any videos.
  Also, Twitter, LinkedIn, agi.mit.edu
  if you wanna watch other lectures
@@ -32,7 +32,7 @@
  to fail in so many new and exciting ways
  and this conversation was no different.
  I've learned about something called"
-1,./data/episode_001_large.vtt,33,416," Radio frequency interference, RFI, is an exceptionally difficult sound source to remove . The probability of intelligent life on any given planet is some"," radio frequency interference, RFI, look it up.
+2,./data/episode_001_large.vtt,33,339,,0:01:36.016,0:15:34.056," radio frequency interference, RFI, look it up.
  Apparently, music and conversations
  from local radio stations can bleed into the audio
  that you're recording in such a way
@@ -337,8 +337,8 @@
  would you feel a little bit creeped out
  if you realized that it was just a glossed up tape recorder,
  you know, that was just zombie and was a faking emotion?
- Would you prefer that it actually had an experience
- or would you prefer that it's actually
+ Would you prefer that it actually had an experience"
+3,./data/episode_001_large.vtt,339,381,,0:15:34.056,0:17:19.016," or would you prefer that it's actually
  not experiencing anything so you feel,
  you don't have to feel guilty about what you do to it?
  It's such a difficult question because, you know,
@@ -379,8 +379,8 @@
  of a bad track record also of making
  these self serving arguments
  that other entities aren't conscious.
- You know, people often say,
- oh, these animals can't feel pain.
+ You know, people often say,"
+4,./data/episode_001_large.vtt,381,416,,0:17:19.016,0:18:47.011," oh, these animals can't feel pain.
  It's okay to boil lobsters because we ask them
  if it hurt and they didn't say anything.
  And now there was just a paper out saying,
@@ -415,7 +415,7 @@
  that are important to us humans, for sure.
  But I don't think the physical embodiment
  is necessary after you've learned it"
-2,./data/episode_001_large.vtt,416,569," Darwinian evolution endowed us with a self preservation instinct because those that didn't have those genes got cleaned out of the gene pool, right"," to just have the experience.
+5,./data/episode_001_large.vtt,416,569,,0:18:47.011,0:26:07.096," to just have the experience.
  Think about when you're dreaming, right?
  Your eyes are closed.
  You're not getting any sensory input.
@@ -568,7 +568,7 @@
  based on what we understand about cosmology
  everything is in our universe is probably
  ultimately probably finite, although."
-3,./data/episode_001_large.vtt,569,804," There's still no machine that can match a human child in general intelligence but artificial general intelligence, AGI, is by its very definition"," Big crunch or big, what's the, the infinite expansion.
+6,./data/episode_001_large.vtt,569,804,,0:26:07.096,0:37:31.005," Big crunch or big, what's the, the infinite expansion.
  Yeah, we could have a big chill or a big crunch
  or a big rip or that's the big snap or death bubbles.
  All of them are more than a billion years away.
@@ -803,7 +803,7 @@
  But that's not necessarily what I mean by creativity.
  Is it important on that complex goals
  where the sea is rising for there"
-4,./data/episode_001_large.vtt,804,1162," Human intelligence is an aspect of intelligence, says David Bingham . He says we have to be careful with human vanity when it comes to"," to be something creative?
+7,./data/episode_001_large.vtt,804,1162,,0:37:31.005,0:54:45.007," to be something creative?
  Or am I being very human centric and thinking creativity
  somehow special relative to intelligence?
  My hunch is that we should think of creativity simply
@@ -1161,7 +1161,7 @@
  And if it can only reply,
  I was trained on five terabytes of data
  and this is my diagnosis, boop, boop, beep, beep."
-5,./data/episode_001_large.vtt,1162,1415, CNN's John Sutter talks to DeepMind's Demis Hassabis on deep learning and deep learning AI . He says AI can be," It doesn't really instill a lot of confidence, right?
+8,./data/episode_001_large.vtt,1162,1385,,0:54:45.007,0:04:41.007," It doesn't really instill a lot of confidence, right?
  So I think we have a lot of work to do
  on communication there.
  So what kind of, I think you're doing a little bit of work
@@ -1383,8 +1383,8 @@
  on why deeper networks are good,
  but we were able to show an additional cool fact there,
  which is that even incredibly simple problems,
- like suppose I give you a thousand numbers
- and ask you to multiply them together,
+ like suppose I give you a thousand numbers"
+9,./data/episode_001_large.vtt,1385,1415,,1:04:41.000,0:06:03.002," and ask you to multiply them together,
  and you can write a few lines of code, boom, done, trivial.
  If you just try to do that with a neural network
  that has only one single hidden layer in it,
@@ -1414,7 +1414,7 @@
  I suspect your brain is not a quantum computer
  in any profound sense.
  So you don't even wrote a paper about that"
-6,./data/episode_001_large.vtt,1415,1514," In the future, we may use quantum computers to help train neural networks better than the brain . Quantum computers could be used to solve complex"," a lot many years ago.
+10,./data/episode_001_large.vtt,1415,1514,,1:06:03.000,0:10:18.024," a lot many years ago.
  I calculated the so called decoherence time,
  how long it takes until the quantum computerness
  of what your neurons are doing gets erased
@@ -1513,3 +1513,112 @@
  So we should be proactive about it
  and ask ourselves what sort of future
  we would like to have happen."
+11,./data/episode_001_large.vtt,1514,1552,,1:10:18.000,0:12:08.043," We're going to make it like that.
+ Well, what I prefer is just some sort of incredibly boring,
+ zombie like future where there's all these
+ mechanical things happening and there's no passion,
+ no emotion, no experience, maybe even.
+ No, I would of course, much rather prefer it
+ if all the things that we find that we value the most
+ about humanity are our subjective experience,
+ passion, inspiration, love, you know.
+ If we can create a future where those things do happen,
+ where those things do exist, you know,
+ I think ultimately it's not our universe
+ giving meaning to us, it's us giving meaning to our universe.
+ And if we build more advanced intelligence,
+ let's make sure we build it in such a way
+ that meaning is part of it.
+ A lot of people that seriously study this problem
+ and think of it from different angles
+ have trouble in the majority of cases,
+ if they think through that happen,
+ are the ones that are not beneficial to humanity.
+ And so, yeah, so what are your thoughts?
+ What's should people, you know,
+ I really don't like people to be terrified.
+ What's a way for people to think about it
+ in a way we can solve it and we can make it better?
+ No, I don't think panicking is going to help in any way.
+ It's not going to increase chances
+ of things going well either.
+ Even if you are in a situation where there is a real threat,
+ does it help if everybody just freaks out?
+ No, of course, of course not.
+ I think, yeah, there are of course ways
+ in which things can go horribly wrong.
+ First of all, it's important when we think about this thing,
+ about the problems and risks,
+ to also remember how huge the upsides can be
+ if we get it right, right?"
+12,./data/episode_001_large.vtt,1552,1603,,1:12:08.000,0:14:28.001," Everything we love about society and civilization
+ is a product of intelligence.
+ So if we can amplify our intelligence
+ with machine intelligence and not anymore lose our loved one
+ to what we're told is an incurable disease
+ and things like this, of course, we should aspire to that.
+ So that can be a motivator, I think,
+ reminding ourselves that the reason we try to solve problems
+ is not just because we're trying to avoid gloom,
+ but because we're trying to do something great.
+ But then in terms of the risks,
+ I think the really important question is to ask,
+ what can we do today that will actually help
+ make the outcome good, right?
+ And dismissing the risk is not one of them.
+ I find it quite funny often when I'm in discussion panels
+ about these things,
+ how the people who work for companies,
+ always be like, oh, nothing to worry about,
+ nothing to worry about, nothing to worry about.
+ And it's only academics sometimes express concerns.
+ That's not surprising at all if you think about it.
+ Right.
+ Upton Sinclair quipped, right,
+ that it's hard to make a man believe in something
+ when his income depends on not believing in it.
+ And frankly, we know a lot of these people in companies
+ that they're just as concerned as anyone else.
+ But if you're the CEO of a company,
+ that's not something you want to go on record saying
+ when you have silly journalists who are gonna put a picture
+ of a Terminator robot when they quote you.
+ So the issues are real.
+ And the way I think about what the issue is,
+ is basically the real choice we have is,
+ first of all, are we gonna just dismiss the risks
+ and say, well, let's just go ahead and build machines
+ that can do everything we can do better and cheaper.
+ Let's just make ourselves obsolete as fast as possible.
+ What could possibly go wrong?
+ That's one attitude.
+ The opposite attitude, I think, is to say,
+ here's this incredible potential,
+ let's think about what kind of future
+ we're really, really excited about.
+ What are the shared goals that we can really aspire towards?
+ And then let's think really hard
+ about how we can actually get there.
+ So start with, don't start thinking about the risks,
+ start thinking about the goals.
+ And then when you do that,"
+13,./data/episode_001_large.vtt,1603,1623,,1:14:28.000,0:15:15.083," then you can think about the obstacles you want to avoid.
+ I often get students coming in right here into my office
+ for career advice.
+ I always ask them this very question,
+ where do you want to be in the future?
+ If all she can say is, oh, maybe I'll have cancer,
+ maybe I'll get run over by a truck.
+ Yeah, focus on the obstacles instead of the goals.
+ She's just going to end up a hypochondriac paranoid.
+ Whereas if she comes in and fire in her eyes
+ and is like, I want to be there.
+ And then we can talk about the obstacles
+ and see how we can circumvent them.
+ That's, I think, a much, much healthier attitude.
+ And I feel it's very challenging to come up with a vision
+ for the future, which we are unequivocally excited about.
+ I'm not just talking now in the vague terms,
+ like, yeah, let's cure cancer, fine.
+ I'm talking about what kind of society
+ do we want to create?"
