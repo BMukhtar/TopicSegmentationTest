@@ -1,8 +1,6 @@
 import sys
 import pandas as pd
 
-input_df = pd.read_csv('./train.csv')
-label_df = pd.read_csv('./test.csv')
 
 def preprocessing(df, caption_col_name):
     fillers = ["um", "uh", "oh", "hmm", "you know", "like"]
@@ -25,7 +23,6 @@ def preprocessing(df, caption_col_name):
     df.reset_index(inplace=True)
 
     return df
-
 
 
 def icsi_dataset():
@@ -53,12 +50,7 @@ def icsi_dataset():
 
     label_df
     """
-    train = input_df
-    test = label_df
-    # train = train[input_df['meeting_id'] < 1]
-    # test = test[label_df['meeting_id'] < 1]
-    train = preprocessing(train, 'caption')
-    return train, test
+    pass
 
 
 def ami_dataset():
@@ -81,9 +73,9 @@ def ami_dataset():
             FROM {labels}
             WHERE ds = '2021-01-10'
     """
-    train = input_df
-    test = label_df
-    # train = train[input_df['meeting_id'] < 1]
-    # test = test[label_df['meeting_id'] < 1]
+    train = pd.read_csv('data/train_ami.csv')
+    test = pd.read_csv('data/test_ami.csv')
+    train = train[train['meeting_id'] < 1]
+    test = test[test['meeting_id'] < 1]
     train = preprocessing(train, 'caption')
     return train, test

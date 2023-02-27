@@ -4,27 +4,15 @@ import numpy as np
 import pandas as pd
 import torch
 
-from transformers import RobertaConfig, RobertaModel, RobertaTokenizer
-from transformers import AutoTokenizer, AutoModel
-
 from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('all-mpnet-base-v2')
-
-# pretrained roberta model
-# configuration = RobertaConfig()
-# roberta_model = RobertaModel.from_pretrained("roberta-base")
-# roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
-
-# roberta = torch.hub.load('pytorch/fairseq', 'roberta.base')
-# roberta.eval()
 
 from custom_types import (
     TopicSegmentationAlgorithm,
     TopicSegmentationConfig,
-    TextTilingHyperparameters,
 )
 
 PARALLEL_INFERENCE_INSTANCES = 20
+model = SentenceTransformer('all-mpnet-base-v2')
 
 
 def PrintMessage(msg, x):
@@ -113,22 +101,6 @@ def get_features_from_sentence(batch_sentences, layer=-2):
     returns a 1-dimensional tensor of size 758
     """
 
-
-    # batch_features = []
-    # for sentence in batch_sentences:
-    #     tokens = roberta_tokenizer.encode(sentence)
-    #     with torch.no_grad():
-    #         output = roberta_model(torch.tensor([tokens]))
-    #         last_hidden_state = output.last_hidden_state
-    #         batch_features.append(last_hidden_state.mean(dim=1))
-
-    # batch_features = []
-    # for sentence in batch_sentences:
-    #     tokens = model.encode(sentence).tolist()
-    #     with torch.no_grad():
-    #         output = roberta_model(torch.tensor([tokens]))
-    #         last_hidden_state = output.last_hidden_state
-    #         batch_features.append(last_hidden_state.mean(dim=1))
     return model.encode(batch_sentences, convert_to_numpy=False)
 
 
@@ -152,7 +124,7 @@ def get_local_maxima(array):
 
 def depth_score_to_topic_change_indexes(
         depth_score_timeseries,
-        meeting_duration=60*3600,
+        meeting_duration=60 * 3600,
         topic_segmentation_configs=TopicSegmentationConfig,
 ):
     """
