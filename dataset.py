@@ -75,7 +75,7 @@ def ami_dataset():
     """
     train = pd.read_csv('data/train_ami.csv')
     test = pd.read_csv('data/test_ami.csv')
-    train = train[train['meeting_id'] < 1]
-    test = test[test['meeting_id'] < 1]
+    # train = train[train['meeting_id'] < 1]
+    # test = test[test['meeting_id'] < 1]
     train = preprocessing(train, 'caption')
     return train, test
